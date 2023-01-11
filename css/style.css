@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+.html, body{
+    width: 100%;
+    height: 100%;
+    font-family: "Consolas";
+    color: rgb(0, 0, 0);
+    margin: 0;
+}
+/*Убрать полосу прокрутки для всей страницы*/
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+.main_start{ /*верхняя панель, НАЧАЛО*/
+    position: relative;
+    top: 5px;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #3CB371;
+}
+
+.logo{
+    position: absolute;
+    overflow: hidden;
+}
+
+.logo_img{
+    height: 98px;
+}/*верхняя панель, КОНЕЦ*/
+
+
+
+.zavod{ /*верхнее фото завода, НАЧАЛО*/
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 58% 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img_zavod{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}       /*верхнее фото завода, КОНЦЕ*/
+
+
+
+.download_block{ /*скачать буклет, НАЧАЛО*/
+    text-decoration: none;
+    font-size: 40px;
+    margin: 50px;
+    text-align: center;
+}       /*скачать буклет, КОНЕЦ*/
+
+
+
+.box_main{  /*сфера деятельности, НАЧАЛО*/
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    margin: 25px auto;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    display: flex;       
+}
+
+.item{
+    width: 45%;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 40px;       
+}
+
+.box_img{
+    width: 40%;
+    height: 40%;
+    float: center;           
+}
+
+.box_text_zagolovok{
+    font-weight: 700;
+}       /*сфера деятельности, КОНЕЦ*/
+
+
+
+.box3_main{ /*почта, обратная связь НАЧАЛО*/
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.form_mail{
+    font-size: 30px;
+    width: 310px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.mail{
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    margin: 3px;
+}   
+
+.button_mail{
+    width: 100px;
+    height: 50px;
+}       /*почта, обратная связь КОНЕЦ*/
+
+
+
+.box4_phone{ /*номера телефонов, НАЧАЛО*/
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #3CB371;
+}
+
+.phone{
+    width: 600px;
+    height: 98px;
+    display: flex;    
+}
+
+.cont{
+    text-align: center;
+    padding: 9px;
+}
+
+.number_ph{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 2px;
+}       /*номера телефонов, КОНЕЦ*/
+
