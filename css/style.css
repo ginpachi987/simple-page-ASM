@@ -1,174 +1,224 @@
-@charset "UTF-8";
-
-.html, body{
-    width: 100%;
-    height: 100%;
-    font-family: "Consolas";
-    color: rgb(0, 0, 0);
-    margin: 0;
+:root {
+  --bg-color: #3CB371;
 }
 
-
-
-.main_start{ /*верхняя панель, НАЧАЛО*/
-    width: 100%;
-    height: 100px;
-    background-color: #3CB371;
-    display: flex;
+* {
+  font-family: "Consolas", sans-serif;
 }
 
-.main_block{ 
-    width: 33%; 
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    padding: 5px;
-}    
-/*сами ТЛФ*/
-.number_ph{
-    text-align: center; 
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 100%;
-    letter-spacing: 2px;  
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo_img{
-    margin: 0 auto;
-    height: 90px;
-
+a {
+  text-decoration: none;
 }
 
-.siemens_logo_img{
-    margin: 10px;
+.phone {
+  color: white;
+}
+
+h2 {
+  padding: 0 16px;
+}
+
+header,
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: var(--bg-color);
+  
+}
+
+.header-wrapper {
+  display: inline-flex;
+  width: 100%;
+  max-width: 800px;
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  padding: 8px 0;
+}
+
+.header-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.siemens-logo {
+  margin: 10px;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 500px;
+  height: 58px;
+}
+
+.zavod {
+  background-image: url('../img/img_main.png');
+  background-position: center center;
+  background-size: cover;
+
+  width: 100%;
+  height: 20rem;
+  text-align: center;
+}
+
+.zavod-wrapper {
+  width: 800px;
+  max-width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+}
+
+.info-grid {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 800px;
+  max-width: 100%;
+  gap: 16px;
+  padding: 16px;
+  /* margin: 32px; */
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-item p {
+  font-size: 18px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.info-item:nth-child(5) h3 {
+  margin-bottom: 0;
+}
+
+.info-img {
+  width: 40%;
+}
+
+form {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  background-color: var(--bg-color);
+
+  border-radius: 8px;
+
+  margin: 32px;
+  padding: 16px 32px;
+}
+
+.zavod-wrapper form {
+  display: inline-flex;
+  background-color: rgba(60, 179, 114, 0.8);
+  margin: 0;
+}
+
+form p {
+  margin: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input {
+  text-align: center;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 4px;
+  outline: unset;
+  border: 1px solid black;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+
+  transition: all .2s ease-in;
+}
+
+button:hover {
+  background-color: #37674d;
+  color: white;
+}
+
+@media (max-width: 760px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    justify-content: space-evenly;
+  }
+
+  .header-block:nth-child(2) {
+    display: none;
+    order: 3;
+    grid-column: 1 / span 2;
+    /* flex-direction: row; */
+    /* gap: 32px; */
+    margin: 16px 0;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .siemens-logo {
+    /* margin: 10px;
     border: 1px solid white;
     background-color: white;
-    border-radius: 500px;
-    height: 58px; 
-}/*верхняя панель, КОНЕЦ*/
+    border-radius: 500px; */
+    height: 29px;
+  }
 
-
-
-.zavod{ /*верхнее фото завода, НАЧАЛО*/
-    margin: 0px 0px 20px 0px;
-    padding: 0px 0px 58% 0px;
-    overflow: hidden;
-    position: relative;
-}
-
-.img_zavod{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}       /*верхнее фото завода, КОНЦЕ*/
-
-
-
-.box_main{  /*сфера деятельности, НАЧАЛО*/
-    width: 100%;
-    height: 70px;
-    margin: 0;
-    padding: 15px;
+  .zavod {
     text-align: center;
-    font-size: 30px;
+  }
+
+  .zavod-wrapper {
+    justify-content: center;
+  }
 }
-
-.box{
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-    margin: 25px auto;
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    display: flex;       
-}
-
-.item{
-    width: 45%;
-    height: 100%;
-    text-align: center;
-    padding: 10px;
-    margin: 0 auto;
-    font-size: 40px;       
-}
-
-.box_img{
-    width: 40%;
-    height: 40%;
-    float: center;           
-}
-
-.box_text_zagolovok{
-    font-weight: 700;
-}       /*сфера деятельности, КОНЕЦ*/
-
-
-
-.download_block{ /*скачать буклет, НАЧАЛО*/
-    text-decoration: none;
-    font-size: 40px;
-    margin: 50px;
-    text-align: center;
-}       /*скачать буклет, КОНЕЦ*/
-
-
-
-.box3_main{ /*почта, обратная связь НАЧАЛО*/
-    width: 100%;   
-}
-
-.form_mail{
-    font-size: 40px;
-    width: 350px;
-    margin: 10px auto;
-    padding: 20px;
-    text-align: center;
-    background-color: #3CB371;
-    border-radius: 7px;
-    color: white;
-}
-
-.mail{
-    text-align: center;
-    font-size: 20px;
-    width: 200px;
-    height: 30px;
-    margin: 5px;
-}   
-
-.button_mail{
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
-}       /*почта, обратная связь КОНЕЦ*/
-
-
-
-.bottom{ /*нижняя панель, НАЧАЛО*/
-    width: 100%;
-    height: 100px;
-    background-color: #3CB371;
-    display: flex;   
-}
-
-.bot_block{
-    width: 100%; 
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    padding: 5px;
-}    
-/*сами ТЛФ*/
-.number_ph{
-    text-align: center; 
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 100%;
-    letter-spacing: 2px;  
-}       /*номера телефонов, КОНЕЦ*/
-
